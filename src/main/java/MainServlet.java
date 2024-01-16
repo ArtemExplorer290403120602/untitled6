@@ -21,7 +21,7 @@ public class MainServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html");
-
+        logRequestTime(req.getSession());
         PrintWriter out=resp.getWriter();
         out.print("<h2> Приложение Артем на сайте!!!</h2>");
     }
